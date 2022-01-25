@@ -10,7 +10,7 @@ Pero antes instalaremos un servidor SSH en nuestro caso instalaremos OpenSSH.
 ## Instalación
 
 Para instalar FAIL2BAN solo tendremos que poner en Ubuntu el comando: 
-sudo apt install -y fail2ban
+**sudo apt install -y fail2ban**
 
 ## Configuración
 
