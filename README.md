@@ -20,7 +20,13 @@ El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
 También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
-Prueba desde git
+
+## EJEMPLOS
+
+En el primer ejemplo vamos ignorar nuestra propia IP y por mucho que nos equivoquemos no bloqueará la IP.
+
+
+
 ### BIBLIOGRAFÍA
 - https://programmerclick.com/article/3350758799/
 - https://www.arsys.es/blog/instalar-fail2ban
