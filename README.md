@@ -22,9 +22,23 @@ Para poner nuestras propias reglas de conexión deberemos modificar el siguiente
 También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
 
 ## EJEMPLOS
-
+### Ejemplo 1
 En el primer ejemplo vamos ignorar nuestra propia IP y por mucho que nos equivoquemos no bloqueará la IP.
 
+Tras poner que ignore la IP proparemos la conexión, primero fallando los tres intentos para ver que no nos bloquea y por último nos conectaremos con nuestra propia IP.
+
+### Ejemplo 2
+El segundo ejemplo será un poco más realista.
+Ignoraremos una IP del rango del servidor.
+
+Haremos como en el primer ejemplo, primero nos equivocaremos en el tercer intento y luego nos conectaremos viendo que no nos ha bloqueado.
+### Ejemplo 3
+
+El último ejemplo lo realizaremos con un vídeo ya que haremos una atque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
+
+También veremos los log de FAIL2BAN para comprobar lo que ha ido sucediendo con el ataque de fuerza bruta.
+
+## ENLACE AL VÍDEO
 
 
 ### BIBLIOGRAFÍA
