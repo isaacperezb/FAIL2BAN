@@ -18,11 +18,11 @@ Una vez lo tengamos instalado deberemos ir al fichero de configuración para añ
 
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
 
-<img src="FAIL2BAN\1.JPG" alt="fichero">
+![fichero](FAIL2BAN\1.JPG)
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
-<img src="FAIL2BAN\2.JPG" alt="fichero-local">
+![fichero-local](FAIL2BAN\2.JPG)
 
 También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
 
@@ -30,7 +30,7 @@ Una vez hayamos modificado nuestras reglas reiniciaremos FAIL2BAN: **sudo servic
 
 Podemos ver que los parámetros que nos muestra son los establecidos por mí en el fichero local.
 
-<img src="FAIL2BAN\3.JPG" alt="logs">
+![logs](FAIL2BAN\3.JPG)
 
 
 ## EJEMPLOS
@@ -39,36 +39,36 @@ En el primer ejemplo vamos ignorar nuestra propia IP y por mucho que nos equivoq
 
 En este caso mi IP del servidor es: 192.168.1.125
 
-<img src="FAIL2BAN\4.JPG" alt="ipServer">
+![ip-servidor](FAIL2BAN\4.JPG)
 
 Tras poner que ignore la IP proparemos la conexión, primero fallando los tres intentos para ver que no nos bloquea y por último nos conectaremos con nuestra propia IP.
 
 
 Nos equivocamos en los tres intentos.
 
-<img src="FAIL2BAN\5.JPG" alt="intento-fallido">
+![fallo-intencionado](FAIL2BAN\5.JPG)
 
 Ahora vamos a volver a intentarlo ya que no nos ha bloqueado.
 
-<img src="FAIL2BAN\6.JPG" alt="intento-aceptado">
+![intento-valido](FAIL2BAN\6.JPG)
 
 Podemos observar que el intento de sesión con nuestra propia IP no se ha registrado en el fichero log.
 
-<img src="FAIL2BAN\7.JPG" alt="logs">
+![logs](FAIL2BAN\7.JPG)
 
 ### Ejemplo 2
 El segundo ejemplo será un poco más realista.
 Ignoraremos una IP del rango del servidor.
 
-<img src="FAIL2BAN\8.JPG" alt="registro-ip">
+![registro-IP](FAIL2BAN\8.JPG)
 
 Haremos como en el primer ejemplo, primero nos equivocaremos en los tres intentos y luego nos conectaremos viendo que no nos ha bloqueado.
 
 Vamos a fallar en los tres intentos.
-<img src="FAIL2BAN\9.JPG" alt="conexionFallida">
+![conexion-fallida](FAIL2BAN\9.JPG)
 
 No nos ha bloqueado por lo que nos vamos a repetir la conexión, esta vez conectándonos.
-<img src="FAIL2BAN\10.JPG" alt="conexionAceptada">
+![conexion-aceptada](FAIL2BAN\10.JPG)
 
 ### Ejemplo 3
 
