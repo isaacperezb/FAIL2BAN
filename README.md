@@ -32,6 +32,7 @@ El segundo ejemplo será un poco más realista.
 Ignoraremos una IP del rango del servidor.
 
 Haremos como en el primer ejemplo, primero nos equivocaremos en el tercer intento y luego nos conectaremos viendo que no nos ha bloqueado.
+
 ### Ejemplo 3
 
 El último ejemplo lo realizaremos con un vídeo ya que haremos una atque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
