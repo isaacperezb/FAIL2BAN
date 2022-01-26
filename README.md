@@ -22,7 +22,7 @@ El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo 
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
-
+<img src="FAIL2BAN\2.JPG" alt="fichero-local">
 
 También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
 
