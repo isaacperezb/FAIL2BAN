@@ -18,7 +18,7 @@ Una vez lo tengamos instalado deberemos ir al fichero de configuración para añ
 
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
 
-
+![fichero](C:\Users\isaac\FAIL2BAN\FAIL2BAN\1.JPG)
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
