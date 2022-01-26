@@ -18,17 +18,17 @@ Una vez lo tengamos instalado deberemos ir al fichero de configuración para añ
 
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
 
-![fichero_configuracion](https://github.com/isaacperezb/FAIL2BAN/blob/main/FAIL2BAN/1.JPG)
+
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
-![fichero_configuracion_local](https://github.com/isaacperezb/FAIL2BAN/blob/main/FAIL2BAN/2.JPG)
+
 
 También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
 
 Una vez hayamos modificado nuestras reglas reiniciaremos FAIL2BAN: **sudo service fail2ban restart** y miraremos el fichero log.
 
-[fichero_log](https://github.com/isaacperezb/FAIL2BAN/blob/main/FAIL2BAN/3.JPG)
+
 
 
 ## EJEMPLOS
