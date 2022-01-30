@@ -1,11 +1,10 @@
 # FAIL2BAN
-FAIL2BAN es una plaicación de Linux, que nos permite controlar y denegar conexiones de IPs no autorizadas a nuestro servidor.
+FAIL2BAN es una aplicación de Linux, que nos permite controlar y denegar conexiones de IPs no autorizadas a nuestro servidor.
 Estas acciones las realiza al bloquear o banear a las IPs que realizan varios intentos fallidos de acceso a nuestro servidor (ataques de fuerza bruta).
 
 Se distribuye bajo licencia GNU y funciona en sistemas POSIX.
 
 Vamos a explicar la instalación y configuración de FAIL2BAN.
-Pero antes instalaremos un servidor SSH en nuestro caso instalaremos OpenSSH.
 
 ## Instalación
 
@@ -41,7 +40,7 @@ En este caso mi IP del servidor es: 192.168.1.125
 
 ![ip-servidor](FAIL2BAN/4.JPG)
 
-Tras poner que ignore la IP proparemos la conexión, primero fallando los tres intentos para ver que no nos bloquea y por último nos conectaremos con nuestra propia IP.
+Tras poner que ignore la IP probaremos la conexión, primero fallando los tres intentos para ver que no nos bloquea y por último nos conectaremos con nuestra propia IP.
 
 
 Nos equivocamos en los tres intentos.
@@ -72,19 +71,19 @@ No nos ha bloqueado por lo que nos vamos a repetir la conexión, esta vez conect
 
 ### Ejemplo 3
 
-El último ejemplo lo realizaremos con un vídeo ya que haremos una atque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
+El último ejemplo lo realizaremos con un vídeo ya que haremos un ataque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
 
-También veremos los log de FAIL2BAN para comprobar lo que ha ido sucediendo con el ataque de fuerza bruta.
+También veremos los logs de FAIL2BAN para comprobar lo que ha ido sucediendo con el ataque de fuerza bruta.
 
 ## Desbanear IP
 
 Para desbloquear una IP la cual no queremos que esté baneada debemos poner el siguiente comando: **sudo fail2ban-client unban IP-BANEADA**
 
-Por ejemplo si tenemos baneada la IP 192.168.156
+Por ejemplo, si tenemos baneada la IP 192.168.156
 
 Para desbanearla pondríamos el comando: **sudo fail2ban-client unban 192.168.1.56**
 
-Esto nos dará como salida un 1 en referencia a que una IP se ha desbaneado y al mirar iptables con el comando: **sudo iptables -L** veremos que la IP que estaba baneada ya no estará, e incluso viendo el fichero de los log veremos que está desbaneada.
+Esto nos dará como salida un 1 en referencia a que una IP se ha desbaneado y al mirar iptables con el comando: **sudo iptables -L** veremos que la IP que estaba baneada ya no estará, e incluso viendo el fichero de los logs veremos que está desbaneada.
 
 ## ENLACE AL VÍDEO
 
