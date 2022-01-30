@@ -88,6 +88,7 @@ Esto nos dará como salida un 1 en referencia a que una IP se ha desbaneado y al
 
 ## ENLACE AL VÍDEO
 
+[Vídeo FAIL2BAN](https://www.youtube.com/watch?v=lYviX8mbK4M)
 
 ### BIBLIOGRAFÍA
 - https://programmerclick.com/article/3350758799/
