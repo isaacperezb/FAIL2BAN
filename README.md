@@ -17,9 +17,9 @@ Una vez lo tengamos instalado deberemos ir al fichero de configuración para añ
 
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
 En este caso nos vamos a centrar en tres parámetros los cuales son:
-- bantime: tiempo que pasará la IP baneada
-- findtime: tiempo en el que deben darse las coincidencias para ser baneado (findtime y maxretry)
-- maxretry: intentos para ser baneado
+- **bantime**: tiempo que pasará la IP baneada
+- **findtime**: tiempo en el que deben darse las coincidencias para ser baneado (findtime y maxretry)
+- **maxretry**: intentos para ser baneado
 
 ![fichero](FAIL2BAN/1.JPG)
 
@@ -27,9 +27,9 @@ Hay otras opciones que son interesantes, pero en este caso no vamos a configurar
 
 ![fichero2](FAIL2BAN/14.JPG)
 
-- destemail: email de destino
-- mta: mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
-- port: puerto al que será redireccionada la IP baneada
+- **destemail**: email de destino
+- **mta**: mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
+- **port**: puerto al que será redireccionada la IP baneada
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
