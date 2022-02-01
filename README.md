@@ -27,8 +27,8 @@ Hay otras opciones que son interesantes, pero en este caso no vamos a configurar
 
 ![fichero2](FAIL2BAN/14.JPG)
 
-- destmail: es el email de destino
-- mta: el mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
+- destemail: email de destino
+- mta: mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
 - port: puerto al que será redireccionada la IP baneada
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
