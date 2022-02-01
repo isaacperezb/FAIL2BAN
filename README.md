@@ -13,17 +13,18 @@ Para instalar FAIL2BAN solo tendremos que poner en Ubuntu el comando:
 
 ## Configuración
 
-Una vez lo tengamos instalado deberemos ir al fichero de configuración para añadir nuestras reglas de conexión.
+Aunque el fichero de configuración es: **/etc/fail2ban/jail.conf**, no debemos configurar nada en este archivo ya que si actua un fichero local como puede ser **jail.conf** o **defaults-debian.conf**
+se antepondran dichas reglas.
 
-El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
-En este caso nos vamos a centrar en tres parámetros los cuales son:
+Los parámetros que nos interesan modificar en nuestro fichero local y los cuales se cuentran en: **/etc/fail2ban/jail.conf**, son:
+
 - **bantime**: tiempo que pasará la IP baneada
 - **findtime**: tiempo en el que deben darse las coincidencias para ser baneado (findtime y maxretry)
 - **maxretry**: intentos para ser baneado
 
 ![fichero](FAIL2BAN/1.JPG)
 
-Hay otras opciones que son interesantes, pero en este caso no vamos a configurarlas:
+Además de estas, hay otras opciones que son interesantes, pero en este caso no vamos a configurarlas:
 
 ![fichero2](FAIL2BAN/14.JPG)
 
@@ -31,11 +32,9 @@ Hay otras opciones que son interesantes, pero en este caso no vamos a configurar
 - **mta**: mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
 - **port**: puerto al que será redireccionada la IP baneada
 
-Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
+El fichero donde vamos a configurar nuestras reglas es: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
 ![fichero-local](FAIL2BAN/2.JPG)
-
-También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas (jaulas), pero mi preferencia es usar el fichero que ya viene para ello.
 
 Una vez hayamos modificado nuestras reglas reiniciaremos FAIL2BAN: **sudo service fail2ban restart** y miraremos el fichero log.
 
@@ -52,31 +51,10 @@ En un futuro si queremos ver cuantas IPs tenemos beneadas el comando será: **su
 ![estado-baneadas](FAIL2BAN/13.JPG)
 
 ## EJEMPLOS
+
 ### Ejemplo 1
-En el primer ejemplo vamos ignorar nuestra propia IP y por mucho que nos equivoquemos no bloqueará la IP.
 
-En este caso mi IP del servidor es: 192.168.1.125
-
-![ip-servidor](FAIL2BAN/4.JPG)
-
-Tras poner que ignore la IP probaremos la conexión, primero fallando los tres intentos para ver que no nos bloquea y por último nos conectaremos con nuestra propia IP.
-
-
-Nos equivocamos en los tres intentos.
-
-![fallo-intencionado](FAIL2BAN/5.JPG)
-
-Ahora vamos a volver a intentarlo ya que no nos ha bloqueado.
-
-![intento-valido](FAIL2BAN/6.JPG)
-
-Podemos observar que el intento de sesión con nuestra propia IP no se ha registrado en el fichero log.
-
-![logs](FAIL2BAN/7.JPG)
-
-### Ejemplo 2
-El segundo ejemplo será un poco más realista.
-Ignoraremos una IP del rango del servidor.
+Ignoraremos una IP del rango del servidor, para que cuando falle los tres intentos no nos bloquee la IP y pueda volver a intentar .
 
 ![registro-IP](FAIL2BAN/8.JPG)
 
