@@ -43,7 +43,7 @@ Podemos ver que los parámetros que nos muestra son los establecidos por mí en 
 
 ![logs](FAIL2BAN/3.JPG)
 
-Además podemos ver el estado de nustras "jaulas" (paramétros de FAIL2BAN configurados por nosotros anteriormente) con el siguiente comando: **sudo fail2ban-client status**
+Además podemos ver el estado de nustras "jaulas" con el siguiente comando: **sudo fail2ban-client status**
 
 ![estado-jaulas](FAIL2BAN/12.JPG)
 
@@ -108,7 +108,7 @@ Esto nos dará como salida un 1 en referencia a que una IP se ha desbaneado y al
 
 [Vídeo FAIL2BAN](https://www.youtube.com/watch?v=lYviX8mbK4M)
 
-### BIBLIOGRAFÍA
+## BIBLIOGRAFÍA
 - https://programmerclick.com/article/3350758799/
 - https://www.arsys.es/blog/instalar-fail2ban
 - https://www.youtube.com/watch?v=5sE2Mici96o
