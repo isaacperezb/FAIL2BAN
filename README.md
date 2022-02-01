@@ -16,7 +16,7 @@ Para instalar FAIL2BAN solo tendremos que poner en Ubuntu el comando:
 Aunque el fichero de configuración es: **/etc/fail2ban/jail.conf**, no debemos configurar nada en este archivo ya que si actua un fichero local como puede ser **jail.conf** o **defaults-debian.conf**
 se antepondran dichas reglas.
 
-Los parámetros que nos interesan modificar en nuestro fichero local y los cuales se cuentran en: **/etc/fail2ban/jail.conf**, son:
+Los parámetros que nos interesan modificar en nuestro fichero local (en mi caso usaré: **defaults-debian.conf**) y los cuales se cuentran en: **/etc/fail2ban/jail.conf**, son:
 
 - **bantime**: tiempo que pasará la IP baneada
 - **findtime**: tiempo en el que deben darse las coincidencias para ser baneado (findtime y maxretry)
@@ -24,7 +24,9 @@ Los parámetros que nos interesan modificar en nuestro fichero local y los cuale
 
 ![fichero](FAIL2BAN/1.JPG)
 
-Además de estas, hay otras opciones que son interesantes, pero en este caso no vamos a configurarlas:
+Además de estas, hay otras opciones que son interesantes, pero en este caso no vamos a configurarlas.
+
+Dichas opciones son las siguientes:
 
 ![fichero2](FAIL2BAN/14.JPG)
 
