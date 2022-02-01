@@ -16,8 +16,20 @@ Para instalar FAIL2BAN solo tendremos que poner en Ubuntu el comando:
 Una vez lo tengamos instalado deberemos ir al fichero de configuración para añadir nuestras reglas de conexión.
 
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
+En este caso nos vamos a centrar en tres parámetros los cuales son:
+- bantime: tiempo que pasará la IP baneada
+- findtime: tiempo en el que deben darse las conincidencias para ser baneado
+- maxretry: intentos para ser baneado
 
 ![fichero](FAIL2BAN/1.JPG)
+
+Hay otras opciones que son interesantes, pero en este caso no vamos a configurarlas:
+
+![fichero2](FAIL2BAN/14.JPG)
+
+- destmail: es el email de destino
+- mta: el mta que usaremos que por defecto es sendmail, pero podemos cambiarlo
+- port: puerto al que será redireccionada la IP baneada
 
 Para poner nuestras propias reglas de conexión deberemos modificar el siguiente fichero: **/etc/fail2ban/jail.d/defaults-debian.conf**
 
@@ -31,6 +43,13 @@ Podemos ver que los parámetros que nos muestra son los establecidos por mí en 
 
 ![logs](FAIL2BAN/3.JPG)
 
+Además podemos ver el estado de nustras "jaulas" (paramétros de FAIL2BAN configurados por nosotros anteriormente) con el siguiente comando: **sudo fail2ban-client status**
+
+![estado-jaulas](FAIL2BAN/12.JPG)
+
+En un futuro si queremos ver cuantas IPs tenemos beneadas el comando será: **sudo fail2ban-client status sshd**
+
+![estado-baneadas](FAIL2BAN/13.JPG)
 
 ## EJEMPLOS
 ### Ejemplo 1
