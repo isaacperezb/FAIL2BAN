@@ -18,7 +18,7 @@ Una vez lo tengamos instalado deberemos ir al fichero de configuración para añ
 El fichero es: **/etc/fail2ban/jail.conf**, pero no es recomendable modificarlo por temas de actualizaciones.
 En este caso nos vamos a centrar en tres parámetros los cuales son:
 - bantime: tiempo que pasará la IP baneada
-- findtime: tiempo en el que deben darse las conincidencias para ser baneado
+- findtime: tiempo en el que deben darse las coincidencias para ser baneado (findtime y maxretry)
 - maxretry: intentos para ser baneado
 
 ![fichero](FAIL2BAN/1.JPG)
@@ -35,7 +35,7 @@ Para poner nuestras propias reglas de conexión deberemos modificar el siguiente
 
 ![fichero-local](FAIL2BAN/2.JPG)
 
-También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas, pero mi preferencia es usar el fichero que ya viene para ello.
+También podemos crear el fichero ***jail.local*** en la ruta **/etc/fail2ban/jail.local** y añadir nuestras reglas (jaulas), pero mi preferencia es usar el fichero que ya viene para ello.
 
 Una vez hayamos modificado nuestras reglas reiniciaremos FAIL2BAN: **sudo service fail2ban restart** y miraremos el fichero log.
 
