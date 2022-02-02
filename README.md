@@ -74,6 +74,10 @@ El último ejemplo lo realizaremos con un vídeo ya que haremos un ataque de fue
 
 También veremos los logs de FAIL2BAN para comprobar lo que ha ido sucediendo con el ataque de fuerza bruta.
 
+### ENLACE AL VÍDEO
+
+[Vídeo FAIL2BAN](https://www.youtube.com/watch?v=lYviX8mbK4M)
+
 ## Desbanear IP
 
 Para desbloquear una IP la cual no queremos que esté baneada debemos poner el siguiente comando: **sudo fail2ban-client unban IP-BANEADA**
@@ -83,10 +87,6 @@ Por ejemplo, si tenemos baneada la IP 192.168.156
 Para desbanearla pondríamos el comando: **sudo fail2ban-client unban 192.168.1.56**
 
 Esto nos dará como salida un 1 en referencia a que una IP se ha desbaneado y al mirar iptables con el comando: **sudo iptables -L** veremos que la IP que estaba baneada ya no estará, e incluso viendo el fichero de los logs veremos que está desbaneada.
-
-## ENLACE AL VÍDEO
-
-[Vídeo FAIL2BAN](https://www.youtube.com/watch?v=lYviX8mbK4M)
 
 ## BIBLIOGRAFÍA
 - https://programmerclick.com/article/3350758799/
