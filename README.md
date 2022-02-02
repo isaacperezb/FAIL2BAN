@@ -60,7 +60,7 @@ Ignoraremos una IP del rango del servidor, para que cuando falle los tres intent
 
 ![registro-IP](FAIL2BAN/8.JPG)
 
-Haremos como en el primer ejemplo, primero nos equivocaremos en los tres intentos y luego nos conectaremos viendo que no nos ha bloqueado.
+Primero nos equivocaremos en los tres intentos y luego nos conectaremos viendo que no nos ha bloqueado.
 
 Vamos a fallar en los tres intentos.
 
@@ -72,7 +72,7 @@ No nos ha bloqueado por lo que nos vamos a repetir la conexión, esta vez conect
 
 ## Ejemplo 2
 
-El último ejemplo lo realizaremos con un vídeo ya que haremos un ataque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
+Este segundo ejemplo lo realizaremos con un vídeo, ya que haremos un ataque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces FAIL2BAN la bloqueará durante 24 horas hasta poder intentarlo de nuevo.
 
 También veremos los logs de FAIL2BAN para comprobar lo que ha ido sucediendo con el ataque de fuerza bruta.
 
