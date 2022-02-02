@@ -63,9 +63,11 @@ Ignoraremos una IP del rango del servidor, para que cuando falle los tres intent
 Haremos como en el primer ejemplo, primero nos equivocaremos en los tres intentos y luego nos conectaremos viendo que no nos ha bloqueado.
 
 Vamos a fallar en los tres intentos.
+
 ![conexion-fallida](FAIL2BAN/9.JPG)
 
 No nos ha bloqueado por lo que nos vamos a repetir la conexión, esta vez conectándonos.
+
 ![conexion-aceptada](FAIL2BAN/10.JPG)
 
 ## Ejemplo 2
