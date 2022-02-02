@@ -52,9 +52,9 @@ En un futuro si queremos ver cuantas IPs tenemos beneadas el comando será: **su
 
 ![estado-baneadas](FAIL2BAN/13.JPG)
 
-## EJEMPLOS
+# EJEMPLOS
 
-### Ejemplo 1
+## Ejemplo 1
 
 Ignoraremos una IP del rango del servidor, para que cuando falle los tres intentos no nos bloquee la IP y pueda volver a intentar .
 
@@ -68,7 +68,7 @@ Vamos a fallar en los tres intentos.
 No nos ha bloqueado por lo que nos vamos a repetir la conexión, esta vez conectándonos.
 ![conexion-aceptada](FAIL2BAN/10.JPG)
 
-### Ejemplo 3
+## Ejemplo 2
 
 El último ejemplo lo realizaremos con un vídeo ya que haremos un ataque de fuerza bruta con una IP, a la que no hemos especificado que sea ignorada y la cual al fallar tres veces nos bloqueará la IP durante 24 horas hasta poder intentarlo de nuevo.
 
@@ -77,6 +77,7 @@ También veremos los logs de FAIL2BAN para comprobar lo que ha ido sucediendo co
 ### ENLACE AL VÍDEO
 
 [Vídeo FAIL2BAN](https://www.youtube.com/watch?v=lYviX8mbK4M)
+
 
 ## Desbanear IP
 
